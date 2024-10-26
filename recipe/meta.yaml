@@ -1,5 +1,5 @@
 {% set name = "slurmgen" %}
-{% set version = "3.11.0" %}
+{% set version = "3.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/slurmgen-{{ version }}.tar.gz
-  sha256: c1704dc4eda6f34ec11944165be05f7a70dfcd05c626e86730aabb3289e558f7
+  sha256: bc3d639f1cf3e8171276c4d436e7b6d281d3db5b3924897cf22583a5b8ae6335
 
 build:
   entry_points:
