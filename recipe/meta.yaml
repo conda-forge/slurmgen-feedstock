@@ -1,5 +1,6 @@
 {% set name = "slurmgen" %}
-{% set version = "3.12.0" %}
+{% set version = "3.13.0" %}
+{% set python_min = "3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/slurmgen-{{ version }}.tar.gz
-  sha256: bc3d639f1cf3e8171276c4d436e7b6d281d3db5b3924897cf22583a5b8ae6335
+  sha256: 3d1887b7fa143ee4fd15850bdae0d0e914791e4cbdfbbb851e3befd8a4390d6e
 
 build:
   entry_points:
@@ -18,13 +19,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
-    - setuptools >68.2
-    - wheel >0.41
-    - setuptools-scm >7.1
-    - pip
+    - python {{ python_min }}
+    - setuptools >=68.2
+    - wheel >=0.41
+    - setuptools-scm >=7.1
+    - pip >=24.2
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
