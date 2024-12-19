@@ -1,5 +1,5 @@
 {% set name = "slurmgen" %}
-{% set version = "3.13.0" %}
+{% set version = "3.14.0" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/slurmgen-{{ version }}.tar.gz
-  sha256: 3d1887b7fa143ee4fd15850bdae0d0e914791e4cbdfbbb851e3befd8a4390d6e
+  sha256: 8d763783b181ac06fef4618d299bc996a2e367ebca2ea9b75ada424d7f267966
 
 build:
   entry_points:
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=68.2
-    - wheel >=0.41
-    - setuptools-scm >=7.1
-    - pip >=24.2
+    - setuptools >=75.5
+    - wheel >=0.45
+    - setuptools-scm >=8.1
+    - pip >=24.3
   run:
     - python >={{ python_min }}
 
@@ -34,10 +34,10 @@ test:
     - sgen --help
   requires:
     - python {{ python_min }}
-    - pip >=24.2
+    - pip >=24.3
 
 about:
-  summary: SlurmGen - Simple Slurm Manager
+  summary: SlurmGen - Simple Manager for Slurm Jobs
   description: |
     SlurmGen is a very simple Slurm manager. The job description is stored 
     in JSON files. The JSON files are transformed into Slurm scripts. The 
