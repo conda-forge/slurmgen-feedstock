@@ -7,7 +7,7 @@ Home: https://github.com/otvam/slurmgen
 
 Package license: BSD-2-Clause
 
-Summary: SlurmGen - Simple Slurm Manager
+Summary: SlurmGen - Simple Manager for Slurm Jobs
 
 Development: https://github.com/otvam/slurmgen
 
